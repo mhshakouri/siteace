@@ -1,2 +1,2 @@
 # siteace
-SiteAce assessment for Coursera - not the latest version but funcitoning
+SiteAce assessment for Coursera - not the latest version but functioning
