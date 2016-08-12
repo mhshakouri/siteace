@@ -1,0 +1,43 @@
+<template name="website_item">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<a class="btn btn-primary" type="button" href="/websites/{{_id}}">
+				{{title}} <span class="badge "> <i class="fa fa-thumbs-up"></i> {{upvotescount}}</span>
+			</a>
+			<a href="/websites/{{_id}}" class="btn btn-default btn-xs js-commentscount"><small>{{commentsCount}}</small></a>
+			<a type="button" class="btn btn-primary btn-xs pull-right js-link-to-site" href="{{url}}" target="_blank" title="{{url}}" alt="{{url}} - {{title}}">
+				<small>Visit <i class="glyphicon glyphicon-new-window"></i></small>
+			</a>
+		</div>
+		<div class="panel-body">
+			<div class="col-xs-12 descriptions">
+				<p>{{description}}</p>
+			</div>
+		</div>
+		<div class="panel-footer">
+				{{#if rembut}}
+					<div class="btn-group pull-right" role="group" aria-label="">
+						<button type="button" class="btn btn-danger js-remove">
+							<i class="fa fa-remove"></i>
+						</button>
+					</div>
+				{{/if}}
+				<div class="btn-group pull-right" role="group" aria-label="">
+					<button type="button" class="btn btn-success js-upvote">
+						<i class="fa fa-thumbs-up"></i>
+						<span class="badge badge-likes">{{upvotescount}}</span>
+					</button>
+					<button type="button" class="btn btn-warning js-downvote">
+						<i class="fa fa-thumbs-down"></i>
+						<span class="badge">{{downvotescount}}</span>
+					</button>
+				</div>
+				<small> 
+					<a href="/websites/{{_id}}" class="js-open-site-details " title="View {{title}} details and comments page" alt="{{title}} user ratings and votes| Siterate.ir"><i class="glyphicon glyphicon-time"></i> {{createdDate}}</a>
+				</small><br/>
+				<small>
+					 <a href="/users/{{createdBy}}" class="js-view-user " title="View {{creatorName}} profile" alt="{{creatorName}} | Siterate.ir"><i class="glyphicon glyphicon-user"></i> {{creatorName}}</a>
+				</small>
+		</div>
+	</div>
+</template>

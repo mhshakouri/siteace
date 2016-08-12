@@ -1,0 +1,61 @@
+<template name="mynavbar">
+  <nav class="navbar navbar-default hidden-xs" id="lgNav">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+         <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>-->
+        <a class="navbar-brand" href="/">SiteRate.ir</a>
+        <p class="navbar-text"> {{> loginButtons}}</p>
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+     <div class="collapse navbar-collapse hidden-xs" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav siteratenav navbar-right">
+          <li class="active" id="home"><a href="/"><span class="badge"><i class="glyphicon glyphicon-home"></i> Home </span></a></li>
+          <li id="addsite"><a href="/addsite"><span class="badge"><i class="glyphicon glyphicon-plus-sign"></i> Add a site </span></a></li>
+          <li id="about"><a href="/about" ><span class="badge"><i class="glyphicon glyphicon-info-sign"></i> About SiteRate </span></a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  
+  
+  
+  <nav class="navmenu navmenu-default navmenu-fixed-right offcanvas canvas-slid hidden-md hidden-lg hidden-sm" role="navigation" id="xsNav">
+      <ul class="nav navmenu-nav">
+        <li class="active" id="home"><a href="/">Home <span class="sr-only">(current)</span></a></li>
+        <li id="addsite"><a href="/addsite">Add a site</a></li>
+        <li id="about"><a href="/about">About SiteRate</a></li>
+      </ul>
+  </nav>
+  <div class="navbar navbar-default navbar-fixed-top  hidden-md hidden-lg hidden-sm">
+    <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#xsNav" data-canvas=".canvas">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+      <a class="navbar-brand" href="/">SiteRate.ir</a>
+      <p class="navbar-text"> {{> loginButtons}}</p>
+  </div>
+<!--
+  <div class="navmenu navmenu-default navmenu-fixed-right offcanvas-xs canvas-slide hidden-md hidden-lg hidden-sm">
+      <a class="navmenu-brand visible-md visible-lg" href="#">Project name</a>
+      <ul class="nav navmenu-nav">
+      </ul>
+    </div>
+    
+    <div class="navbar navbar-default navbar-fixed-top hidden-md hidden-lg hidden-sm">
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#xsNav">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        
+    </div>
+    -->
+</template>
